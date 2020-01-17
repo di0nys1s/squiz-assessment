@@ -1,0 +1,535 @@
+/*
+###################
+    ADD YOUR CSS
+    STYLES HERE
+###################
+*/
+
+$backColor: #eee;
+$breadSeperationColor: #007bff;
+
+// used mixin for borders since I used similar border for different classes. It is getting a parameter for deciding the border thickness for the very particular area.
+@mixin borderStyle($borderThickness: 1px, $borderRadius: 5px) {
+    border: $borderThickness solid #747d8c;
+    border-radius: $borderRadius;
+}
+
+@mixin textAlign($textAlign: center) {
+    text-align: $textAlign;
+}
+
+// Setting text-decortaion values dynamiccally
+// with a default value of none.
+@mixin textDecoration($textDecoration: none) {
+    text-decoration: $textDecoration;
+}
+
+body {
+    margin: 4rem 2rem;
+    padding: 0;
+    background-color: $backColor;
+}
+
+// styling breadcrumb inline.
+// hover darken pseudo class added for accessibility purposes
+.breadcrumbs {
+    position: relative;
+    background-color: $backColor;
+    border-radius: 5px;
+    @include borderStyle(0, 5px);
+
+    li,
+    span {
+        margin: 2px;
+        color: $breadSeperationColor;
+
+        &:hover {
+            color: darken($breadSeperationColor, 20%);
+        }
+    }
+
+    .breadcrumbs__item {
+        display: inline;
+
+        a {
+            @include textDecoration();
+        }
+    }
+
+    .breadcrumbs__list {
+        list-style-type: none;
+        margin: 2px;
+        padding: 2px;
+    }
+}
+
+.page-content {
+    @include borderStyle(2px, 5px);
+    @include textAlign(left);
+}
+
+.lhs-nav__sublink,
+.lhs-nav__item {
+    @include borderStyle(1px);
+}
+
+// blockquote css
+.page-content blockquote {
+    position: relative;
+    margin: 0 0 0 1rem;
+    padding: 0 2rem;
+    border-left: 0.2rem solid #70a1ff;
+    line-height: 1.2;
+    @include textAlign(justify);
+}
+
+/*
+--------------------
+    IMPORTS / HELPERS
+    - No need to change
+    the below, just focus
+    on your CSS above
+--------------------
+*/
+
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+$font-family-base: 'Montserrat',
+sans-serif;
+$font-weight-base: normal;
+
+// Typography: Font Weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+.visuallyhidden,
+.sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+body {
+    font-family: $font-family-base;
+    font-weight: $font-weight-base;
+}
+
+/*
+--------------------
+    BREADCRUMBS
+--------------------
+*/
+
+.breadcrumbs {
+    display: block;
+    margin: 1.5rem 0 1.75rem;
+}
+
+/*
+--------------------
+    LHS
+--------------------
+*/
+
+.lhs-nav {
+    background-color: #efefef;
+    border: 1px solid #e1e1e1;
+    display: block;
+    margin-bottom: 1.25rem;
+    margin-right: 1.25rem;
+}
+
+.lhs-nav__list,
+.lhs-nav__sublist,
+.lhs-nav__sublistdeep {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lhs-nav__sublist,
+.lhs-nav__sublistdeep {
+    display: none;
+}
+
+.lhs-nav__sublistdeep {
+    border-top: 1px solid #e1e1e1;
+}
+
+.lhs-nav__subitem:last-child .lhs-nav__sublink {
+    border-bottom: 0 none;
+}
+
+.lhs-nav__link,
+.lhs-nav__sublink,
+.lhs-nav__sublinkdeep {
+    background-color: transparent;
+    border-top: 1px solid #e1e1e1;
+    color: #4a4a4a;
+    display: flex;
+    line-height: 1.5;
+    padding-right: 0.75rem;
+    text-decoration: none;
+    transition: background-color 400ms ease-in-out, color 400ms ease-in-out;
+}
+
+.lhs-nav__link:hover,
+.lhs-nav__link:focus,
+.lhs-nav__sublink:hover,
+.lhs-nav__sublink:focus,
+.lhs-nav__sublinkdeep:hover,
+.lhs-nav__sublinkdeep:focus {
+    text-decoration: none;
+}
+
+.lhs-nav__link:focus,
+.lhs-nav__sublink:focus,
+.lhs-nav__sublinkdeep:focus {
+    outline: none;
+}
+
+.lhs-nav__link,
+.lhs-nav__sublink {
+    padding-bottom: 1.5rem;
+    padding-left: 1.625rem;
+    padding-top: 1.5rem;
+}
+
+.lhs-nav__sublink,
+.lhs-nav__sublinkdeep {
+    font-size: 0.9375rem;
+}
+
+.lhs-nav__link {
+    background-color: #ffffff;
+}
+
+.lhs-nav__link:hover,
+.lhs-nav__link:focus,
+.lhs-nav__link:hover::after,
+.lhs-nav__link:focus::after {
+    color: #4a4a4a;
+}
+
+.lhs-nav__link:hover,
+.lhs-nav__link:focus {
+    background-color: #fafafa;
+}
+
+.lhs-nav__sublink {
+    background-color: #eaeaea;
+}
+
+.lhs-nav__sublink:hover,
+.lhs-nav__sublink:focus {
+    background-color: #fafafa;
+}
+
+.lhs-nav__sublinkdeep {
+    margin-left: 1.5rem;
+    margin-right: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-left: 1.375rem;
+    padding-top: 1.25rem;
+}
+
+.lhs-nav__sublinkdeep:hover,
+.lhs-nav__sublinkdeep:focus {
+    color: #1f3e60;
+}
+
+.lhs-nav__link--has-children::after {
+    color: #a7a7a7;
+}
+
+.lhs-nav__link-text {
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+}
+
+.lhs-nav__item:first-child .lhs-nav__link {
+    border-top: 0 none;
+}
+
+.lhs-nav__subitemdeep:first-child .lhs-nav__sublinkdeep {
+    border-top: 0 none;
+}
+
+.lhs-nav__item--parent .lhs-nav__link--has-children::after,
+.lhs-nav__item--current .lhs-nav__link--has-children::after,
+.lhs-nav__subitem--parent .lhs-nav__sublink--has-children::after,
+.lhs-nav__subitem--current .lhs-nav__sublink--has-children::after {
+    content: "+";
+}
+
+.lhs-nav__item--parent>.lhs-nav__sublist,
+.lhs-nav__subitem--parent>.lhs-nav__sublistdeep,
+.lhs-nav__item--current>.lhs-nav__sublist,
+.lhs-nav__subitem--current>.lhs-nav__sublistdeep {
+    display: block;
+}
+
+.lhs-nav__item--parent .lhs-nav__link--has-children::after,
+.lhs-nav__item--current .lhs-nav__link--has-children::after {
+    color: #ffffff;
+}
+
+.lhs-nav__item--parent .lhs-nav__link--has-children:hover::after,
+.lhs-nav__item--parent .lhs-nav__link--has-children:focus::after,
+.lhs-nav__item--current .lhs-nav__link--has-children:hover::after,
+.lhs-nav__item--current .lhs-nav__link--has-children:focus::after {
+    color: #4a4a4a;
+}
+
+.lhs-nav__item--current .lhs-nav__link,
+.lhs-nav__item--current .lhs-nav__link:hover,
+.lhs-nav__item--current .lhs-nav__link:focus,
+.lhs-nav__subitem--current .lhs-nav__sublink,
+.lhs-nav__subitem--current .lhs-nav__sublink:hover,
+.lhs-nav__subitem--current .lhs-nav__sublink:focus {
+    cursor: default;
+}
+
+.lhs-nav__item--current .lhs-nav__link,
+.lhs-nav__item--parent .lhs-nav__link {
+    background-color: #1f3e60;
+    color: #ffffff;
+}
+
+.lhs-nav__item--current .lhs-nav__link:hover,
+.lhs-nav__item--current .lhs-nav__link:focus,
+.lhs-nav__item--parent .lhs-nav__link:hover,
+.lhs-nav__item--parent .lhs-nav__link:focus {
+    background-color: #fafafa;
+    color: #122337;
+}
+
+.lhs-nav__subitem--current .lhs-nav__sublink,
+.lhs-nav__subitem--parent .lhs-nav__sublink {
+    border-left: 4px solid #1f3e60;
+    padding-left: 1.375rem;
+}
+
+.lhs-nav__subitemdeep--current .lhs-nav__sublinkdeep {
+    color: #1f3e60;
+}
+
+/*
+--------------------
+    CONTENT VIEWPORT
+--------------------
+*/
+
+.content-viewport p {
+    color: #363636;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.58;
+}
+
+.content-viewport a {
+    border-bottom: 1px solid transparent;
+    box-shadow: inset 0 -1px 0 transparent;
+    color: #234c6c;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all .15s ease-in-out;
+}
+
+.content-viewport a:focus,
+.content-viewport a:hover {
+    border-bottom: 1px solid #234c6c;
+    box-shadow: inset 0 -1px 0 #234c6c;
+    color: #234c6c;
+    text-decoration: none;
+}
+
+.content-viewport h1,
+.content-viewport .h1 {
+    color: #363636;
+    font-size: 3.125rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 0 0 1.625rem;
+    word-break: break-word;
+}
+
+.content-viewport h2,
+.content-viewport .h2 {
+    color: #363636;
+    font-size: 1.6875rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 2rem 0 0.9375rem;
+    word-break: break-word;
+}
+
+.content-viewport h3,
+.content-viewport .h3 {
+    color: #363636;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.04;
+    margin: 1.5rem 0 0.9375rem;
+    word-break: break-word;
+}
+
+.content-viewport h4,
+.content-viewport .h4 {
+    color: #363636;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 1.25rem 0 0.625rem;
+}
+
+.content-viewport h5,
+.content-viewport .h5 {
+    color: #363636;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 1.25rem 0 0.625rem;
+    text-transform: uppercase;
+}
+
+.content-viewport h6,
+.content-viewport .h6 {
+    color: #363636;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 1.25rem 0 0.5rem;
+}
+
+.content-viewport ol li,
+.content-viewport ul li {
+    margin-bottom: 0.875rem;
+}
+
+.content-viewport ol li ol,
+.content-viewport ol li ul,
+.content-viewport ul li ol,
+.content-viewport ul li ul {
+    margin-top: .4rem;
+}
+
+.content-viewport ol li ol li,
+.content-viewport ol li ul li,
+.content-viewport ul li ol li,
+.content-viewport ul li ul li {
+    margin-bottom: .4rem;
+}
+
+.content-viewport ol li ol,
+.content-viewport ul li ol {
+    padding-left: 1.875rem;
+    counter-reset: list;
+}
+
+.content-viewport ol li ol li,
+.content-viewport ul li ol li {
+    counter-increment: list;
+}
+
+.content-viewport ol li ol li::before,
+.content-viewport ul li ol li::before {
+    content: counter(list, lower-alpha) ".";
+    font-size: 1rem;
+    width: 1.375rem;
+    margin-left: -20px;
+}
+
+.content-viewport ol li ol li ol,
+.content-viewport ul li ol li ol {
+    padding-left: 1.875rem;
+    counter-reset: list;
+}
+
+.content-viewport ol li ol li ol li,
+.content-viewport ul li ol li ol li {
+    counter-increment: list;
+}
+
+.content-viewport ol li ol li ol li::before,
+.content-viewport ul li ol li ol li::before {
+    content: counter(list, lower-roman) ".";
+    font-size: 1rem;
+    width: 1.375rem;
+    margin-left: -20px;
+}
+
+.content-viewport ol li ul,
+.content-viewport ul li ul {
+    padding-left: 1.875rem;
+}
+
+.content-viewport ol li ul li::before,
+.content-viewport ul li ul li::before {
+    content: "\25E6";
+    width: 1.375rem;
+    margin-left: -20px;
+}
+
+.content-viewport ol {
+    padding-left: 1.6875rem;
+    transition: all 0.35s ease-in-out;
+}
+
+.content-viewport ol li {
+    color: #363636;
+    counter-increment: list;
+    font-size: 0.9375rem;
+    line-height: 1.53;
+    list-style: none;
+    position: relative;
+    transition: all 0.35s ease-in-out;
+}
+
+.content-viewport ol li:before {
+    color: #5193a3;
+    content: counter(list) ".";
+    display: inline-block;
+    font-weight: 700;
+    margin-left: -1.625rem;
+    transition: all 350ms ease-in-out;
+    width: 1.625rem;
+}
+
+.content-viewport ul {
+    padding-left: 1.125rem;
+    transition: all 0.35s ease-in-out;
+}
+
+.content-viewport ul li {
+    color: #363636;
+    font-size: 0.9375rem;
+    line-height: 1.53;
+    list-style: none;
+    transition: all 350ms ease-in-out;
+    position: relative;
+}
+
+.content-viewport ul li::before {
+    color: #5193a3;
+    content: "\2022";
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-left: -1.0625rem;
+    transition: all 350ms ease-in-out;
+    width: 0.9375rem;
+    position: absolute;
+    left: 0;
+}

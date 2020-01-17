@@ -53,6 +53,27 @@ body {
   background-color: $back-color;
 }
 
+blockquote {
+  position: relative;
+  padding-left: 1em;
+  border-left: 0.2em solid lighten(red, 40%);
+  font-family: 'Roboto', serif;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 100;
+
+  &:before,
+  &:after {
+    content: '\201C';
+    font-family: "Montserrat";
+    color: red;
+  }
+
+  &:after {
+    content: '\201D';
+  }
+}
+
 .login {
   @include make-center(200px, 10px);
   @include form-shape($jumbo-color, 4rem);

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Test Study</title>
+    <title>Squiz Assessment</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -16,22 +16,220 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/squiz.css" />
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="login col-lg-6 col-md-9 col-sm-10">
-          <h1 class="welcome-head">Welcome Squiz!</h1>
+
+    <div id="page-wrapper" class="page-wrapper">
+    <!-- Navigation -->
+    <div class="main-wrapper">
+        <!-- Banner -->
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <nav class="breadcrumbs">
+                        <p id="breadcrumb__label" class="visuallyhidden">You are here:</p>
+                        <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumbs__list" aria-labelledby="breadcrumb__label">
+                            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs__item">
+                                <a itemprop="item" href="" class="breadcrumbs__link">
+                                    <span itemprop="name">Level 1 /</span>
+                                </a>
+                                <meta itemprop="position" content="1" />
+                            </li>
+                            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs__item">
+                                <a itemprop="item" href="https://implementation.squiz.net/sqvic/barwon-water-2017/dist#breadcrumbs-02" class="breadcrumbs__link">
+                                    <span itemprop="name">Level 2 /</span>
+                                </a>
+                                <meta itemprop="position" content="2" />
+                            </li>
+                            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs__item">
+                                <a itemprop="item" href="https://implementation.squiz.net/sqvic/barwon-water-2017/dist#breadcrumbs-03" class="breadcrumbs__link">
+                                    <span itemprop="name">Level 3 /</span>
+                                </a>
+                                <meta itemprop="position" content="3" />
+                            </li>
+                            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs__item">
+                                <a itemprop="item" href="https://implementation.squiz.net/sqvic/barwon-water-2017/dist#breadcrumbs-04" class="breadcrumbs__link">
+                                    <span itemprop="name">Level 4</span>
+                                </a>
+                                <meta itemprop="position" content="4" />
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+                
+              <div class="container">
+                <div class="row">
+                  <div class="sidebar col-lg-3 col-md-4 col-sm-2">
+                     <nav class="lhs-nav">
+                        <ul class="lhs-nav__list">
+                            <li class="lhs-nav__item lhs-nav__item--parent">
+                                <a href="#" class="lhs-nav__link lhs-nav__link--has-children">
+                                    <span class="lhs-nav__link-text">Level 2.1</span>
+                                </a>
+                                <ul class="lhs-nav__sublist">
+                                    <li class="lhs-nav__subitem">
+                                        <a href="#" class="lhs-nav__sublink">
+                                            <span class="lhs-nav__link-text">Level 3.1</span>
+                                        </a>
+                                    </li>
+                                    <li class="lhs-nav__subitem">
+                                        <a href="#" class="lhs-nav__sublink">
+                                            <span class="lhs-nav__link-text">Level 3.1</span>
+                                        </a>
+                                    </li>
+                                    <li class="lhs-nav__subitem">
+                                        <a href="#" class="lhs-nav__sublink">
+                                            <span class="lhs-nav__link-text">Level 3.3</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="lhs-nav__item">
+                                <a href="#" class="lhs-nav__link">
+                                    <span class="lhs-nav__link-text">Level 2.2</span>
+                                </a>
+                            </li>
+                            <li class="lhs-nav__item">
+                                <a href="#" class="lhs-nav__link">
+                                    <span class="lhs-nav__link-text">Level 2.4</span>
+                                </a>
+                            </li>
+                            <li class="lhs-nav__item">
+                                <a href="#" class="lhs-nav__link">
+                                    <span class="lhs-nav__link-text">Level 2.5</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                  </div>
+                  <div class="page-content col-lg-9 col-md-8 col-sm-11">
+                    <main class="main" id="main">
+                        <section class="content-viewport">
+                            <h1>H1 Main Heading</h1>
+                            <div id="data">
+                            <ul class="fruit-list">
+                            </ul>                             
+                            </div>
+                            <p class="text__leader">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim euismod euismod. Morbi dui mi, aliquam non lacus ut, <em>feugiat facilisis metus</em>. Cras ac convallis massa, eu lobortis lacus.</p>
+                            <p>Lorem ipsum dolor sit amet,
+                                <a href="https://www.barwonwater.vic.gov.au/" title="Barwon Water">consectetur adipiscing</a> elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim euismod euismod. Morbi
+                                dui mi, aliquam non lacus ut, feugiat facilisis metus. This is an
+                                <a href="https://onform.com.au/content/onform/agencies/BarwonWater/forms/notification-of-works.html"
+                                    class="link--external">external link</a> pretium erat lorem, quis imperdiet sem laoreet eget.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim
+                                euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus. Cras ac convallis massa, eu lobortis
+                                lacus. Cras accumsan nisl sed orci porta rhoncus. Etiam pretium erat lorem, quis imperdiet sem laoreet eget paragraph
+                                <a href="#">link style</a>
+                            </p>
+                        
+                            <p>Lorem ipsum dolor sit amet,
+                                <a href="#" title="text">consectetur adipiscing</a> elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim euismod euismod. Morbi
+                                dui mi, aliquam non lacus ut, feugiat facilisis metus. pretium erat lorem, quis imperdiet sem laoreet eget. </p>
+                            <p class="text__fine-print">Fine print. Barwon Water is bound by the Victorian Privacy and Data Protection Act 2014. We respect your privacy and
+                                will only collect and use personal information for legitimate purposes.</p>
+                        
+                            <h2>H2 heading</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim
+                                euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus. Cras ac convallis massa, eu lobortis
+                                lacus. Cras accumsan nisl sed orci porta rhoncus. Etiam pretium erat lorem, quis imperdiet sem laoreet eget. Donec
+                                nisl neque, ullamcorper id felis vel, lobortis lobortis ante.</p>
+                        
+                            <h3>H3 subtitle</h3>
+                        
+                    
+                          
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim
+                                euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus.</p>
+                            <p>Cras ac convallis massa, eu lobortis lacus. Cras accumsan nisl sed orci porta rhoncus. Etiam pretium erat lorem, quis
+                                imperdiet sem laoreet eget. Donec nisl neque, ullamcorper id felis vel, lobortis lobortis ante.</p>
+                        
+                            <blockquote>
+                                This is blockquote text. It has a fixed width and fixed line height. Cras dapibus tincidunt dapibus. Phasellus placerat quis
+                                enim euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus. Cras ac convallis massa, eu lobortis
+                                lacus. Cras accumsan nisl sed orci porta rhoncus. Etiam pretium erat lorem, quis imperdiet sem laoreet eget. Donec
+                                nisl neque, ullamcorper id felis vel, lobortis lobortis ante.
+                            </blockquote>
+                        
+                            <h4>H4 subtitle</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim
+                                euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus. Cras ac convallis massa, eu lobortis
+                                lacus. Cras accumsan nisl sed orci porta rhoncus. Etiam pretium erat lorem, quis imperdiet sem laoreet eget. Donec
+                                nisl neque, ullamcorper id felis vel, lobortis lobortis ante.</p>
+                        
+                            <h5>H5 subtitle</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim
+                                euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus. Cras ac convallis massa, eu lobortis
+                                lacus. Cras accumsan nisl sed orci porta rhoncus. Etiam pretium erat lorem, quis imperdiet sem laoreet eget. Donec
+                                nisl neque, ullamcorper id felis vel, lobortis lobortis ante.</p>
+                        
+                            <h6>H6 subtitle</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim
+                                euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus. Cras ac convallis massa, eu lobortis
+                                lacus. Cras accumsan nisl sed orci porta rhoncus. Etiam pretium erat lorem, quis imperdiet sem laoreet eget. Donec
+                                nisl neque, ullamcorper id felis vel, lobortis lobortis ante.</p>
+                        
+                            <h4>Ordered and unordered lists</h4>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis
+                                    enim euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus.</li>
+                                <li>Cras ac convallis massa, eu lobortis lacus. Cras accumsan nisl sed orci porta rhoncus. Etiam pretium erat lorem,
+                                    quis imperdiet sem laoreet eget. Donec nisl neque, ullamcorper id felis vel, lobortis lobortis ante.
+                                    <ul>
+                                        <li>UL UL Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                        <li>Cras ac convallis massa, eu lobortis lacus.</li>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                    </ul>
+                                </li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis
+                                    enim euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus.
+                                    <ol>
+                                        <li>UL OL Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                        <li>Cras ac convallis massa, eu lobortis lacus.</li>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                    </ol>
+                                </li>
+                            </ul>
+                        
+                            <ol>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis
+                                    enim euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus.</li>
+                                <li>Cras ac convallis massa, eu lobortis lacus. Cras accumsan nisl sed orci porta rhoncus. Etiam pretium erat lorem,
+                                    quis imperdiet sem laoreet eget. Donec nisl neque, ullamcorper id felis vel, lobortis lobortis ante.
+                                    <ol>
+                                        <li>OL OL Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                        <li>Cras ac convallis massa, eu lobortis lacus.</li>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                    </ol>
+                                </li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis
+                                    enim euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus.
+                                    <ul>
+                                        <li>OL UL Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                        <li>Cras ac convallis massa, eu lobortis lacus.</li>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </section>
+                    </main>
+                </div>
+                </div>
+                 </div>
+
+                
+            </div>
         </div>
-      </div>
+        <!-- Footer -->
     </div>
+    </div>
+    
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
-    <script src="js/index.js" async defer></script>
+    <script src="js/squiz.js" async defer></script>
   </body>
 </html>
