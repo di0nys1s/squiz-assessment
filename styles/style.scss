@@ -6,6 +6,7 @@ $labelColor: #74b9ff;
 $pColor: #fbc531;
 $colorRed: red;
 $border: 1px solid;
+$testColor: orange;
 
 @import "smile";
 
@@ -129,6 +130,7 @@ body {
     td {
       border: $border;
       padding: 1rem;
+      color: $testColor;
 
     }
 

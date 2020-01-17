@@ -136,6 +136,7 @@ body {
 .my-table table td {
   border: 1px solid;
   padding: 1rem;
+  color: orange;
 }
 
 /*# sourceMappingURL=style.css.map */
