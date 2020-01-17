@@ -1,0 +1,136 @@
+$back-color: #dfe6e9;
+$jumbo-color: #fff;
+$p-font-size: 3rem;
+$box-backColor: #9c88ff;
+$labelColor: #74b9ff;
+$pColor: #fbc531;
+$colorRed: red;
+$border: 1px solid;
+
+@import "smile";
+
+@mixin textAlign($alignValue: center) {
+  text-align: $alignValue;
+}
+
+@mixin make-center($top, $borderRadius) {
+  @extend .box-text;
+  @include textAlign();
+  top: $top;
+  margin: auto;
+  border-radius: $borderRadius;
+}
+
+@mixin form-shape($backColor, $padding) {
+  background-color: $backColor;
+  padding: $padding;
+}
+
+@mixin flex-center($top: 300px) {
+  @include make-center(200px, 10px);
+  @include form-shape($jumbo-color, 4rem);
+  top: $top;
+}
+
+@mixin btn-hover {
+  &:hover {
+    background-color: $colorRed;
+    border: $border $colorRed;
+    content: "Submit";
+  }
+}
+
+@mixin home-button {
+  &:hover {
+    background-color: blue;
+    border: $border blue;
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: $back-color;
+}
+
+.login {
+  @include make-center(200px, 10px);
+  @include form-shape($jumbo-color, 4rem);
+
+  .form-group {
+    @include textAlign(left);
+  }
+
+  label {
+    color: $labelColor;
+  }
+}
+
+.my-jumbotron {
+  @include flex-center(350px);
+  background-color: $labelColor;
+
+}
+
+.home-button {
+  @include home-button();
+}
+
+.warn {
+  visibility: hidden;
+}
+
+.btn-login {
+  float: right;
+  @include btn-hover();
+}
+
+.box {
+  @include make-center(150px, 10px);
+  width: 40rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  background-color: $box-backColor;
+
+  p {
+    color: $pColor;
+    @extend .box-text;
+    font-size: $p-font-size;
+  }
+}
+
+.box-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.navbar {
+  @include make-center(0, 1);
+  background-color: $pColor;
+  @import "navbar";
+}
+
+.my-table {
+  padding: 1rem;
+  @include make-center(650px, 10px);
+  background-color: $jumbo-color;
+  border: $border;
+  position: absolute;
+  display: flex;
+  align-items: center;
+
+  table {
+    border: $border;
+    background-color: $pColor;
+
+    tr,
+    th,
+    td {
+      border: $border;
+      padding: 1rem;
+
+    }
+
+  }
+}

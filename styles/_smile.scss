@@ -1,0 +1,23 @@
+.smile {
+    visibility: hidden;
+    display: block;
+    text-align: center;
+    width: 90px;
+    font-weight: 900;
+    line-height: 1;
+
+    span {
+        font-size: $p-font-size;
+
+    }
+
+    small {
+        font: {
+            style: italic;
+            size: 15px;
+        }
+
+        color: red;
+    }
+
+}
