@@ -20,32 +20,66 @@
   </head>
   <body>
 
-    <div id="page-wrapper" class="page-wrapper">
+    <h1>Task - Front End Basic</h1>
+<p>Fork this codepen and style the below HTML using just <strong>CSS</strong> or you can apply extra classes to the HTML if required. The changes should be applied to only the following elements only:</p>
+
+<ol>
+  <li>Breadcrumbs</li>
+  <li>Layout of 2 columns - you can use any technique you would like or framework by clicking on the CSS settings. If you are able to get a basic responsive version - bonus - otherwise just desktop is fine.</li>
+  <li>Blockquote</li>
+</ol>
+
+<p>Once the <strong>CSS</strong> has been applied, solve the following <strong>JS</strong> problem:</p>
+
+<ul>
+  <li>Using the provided data object in the JS panel, output the title attributes in an ordered list. I.e. <code> let data = () => [{title: "Apples"}, {title: "Oranges"},{title: "Bananas"},{title: "Kiwi Fruit"},{title: "Cherries"}]
+    </code></li>
+  <li>Sort by alphabetical order</li>
+  <li>Append the unordered list to the &lt;div&gt; marked with the ID 'data' and replace the existing content in the box</li>
+</ul>
+
+<p>Other notes</p>
+
+<ul>
+  <li>Spend no more than 60mins in total <strong>(40mins CSS + 20mins JS)</strong></li>
+  <li>If you can't complete it, move on as this will be a test to see how well you can manage the given time. It doesn't need to be pixel perfect, just as long as you have the fundamental understanding</li>
+  <li>Feel free to ask Google but be prepared to explain your solution.</li>
+  <li>Add comments into your code where possible</li>
+</ul>
+
+<h2>Your answer</h2>
+
+<div id="page-wrapper" class="page-wrapper">
     <!-- Navigation -->
     <div class="main-wrapper">
         <!-- Banner -->
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12">
+            <div class="row justify-content-center my-row">
+                <div class="col-12 bread">
                     <nav class="breadcrumbs">
                         <p id="breadcrumb__label" class="visuallyhidden">You are here:</p>
                         <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumbs__list" aria-labelledby="breadcrumb__label">
                             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs__item">
                                 <a itemprop="item" href="" class="breadcrumbs__link">
-                                    <span itemprop="name">Level 1 /</span>
+                                    <span itemprop="name">Level 1</span>
                                 </a>
+                              <span class="bc-sep">/</span>
                                 <meta itemprop="position" content="1" />
                             </li>
                             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs__item">
                                 <a itemprop="item" href="https://implementation.squiz.net/sqvic/barwon-water-2017/dist#breadcrumbs-02" class="breadcrumbs__link">
-                                    <span itemprop="name">Level 2 /</span>
+                                    <span itemprop="name">Level 2</span>
+                                    
                                 </a>
+                              <span class="bc-sep">/</span>
                                 <meta itemprop="position" content="2" />
                             </li>
                             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs__item">
                                 <a itemprop="item" href="https://implementation.squiz.net/sqvic/barwon-water-2017/dist#breadcrumbs-03" class="breadcrumbs__link">
-                                    <span itemprop="name">Level 3 /</span>
+                                    <span itemprop="name">Level 3</span>
+                                    
                                 </a>
+                              <span class="bc-sep">/</span>
                                 <meta itemprop="position" content="3" />
                             </li>
                             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs__item">
@@ -60,7 +94,7 @@
                 
               <div class="container">
                 <div class="row">
-                  <div class="sidebar col-lg-3 col-md-4 col-sm-2">
+                  <div class="sidebar col-lg-3 col-md-4 col-sm-12">
                      <nav class="lhs-nav">
                         <ul class="lhs-nav__list">
                             <li class="lhs-nav__item lhs-nav__item--parent">
@@ -103,13 +137,13 @@
                         </ul>
                     </nav>
                   </div>
-                  <div class="page-content col-lg-9 col-md-8 col-sm-11">
+                  <div class="page-content col-lg-9 col-md-8 col-sm-12">
                     <main class="main" id="main">
                         <section class="content-viewport">
                             <h1>H1 Main Heading</h1>
                             <div id="data">
-                            <ul class="fruit-list">
-                            </ul>                             
+                                                                                                               <ul class="fruit-list">
+                            </ul>                            
                             </div>
                             <p class="text__leader">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim euismod euismod. Morbi dui mi, aliquam non lacus ut, <em>feugiat facilisis metus</em>. Cras ac convallis massa, eu lobortis lacus.</p>
                             <p>Lorem ipsum dolor sit amet,
@@ -136,8 +170,8 @@
                                 nisl neque, ullamcorper id felis vel, lobortis lobortis ante.</p>
                         
                             <h3>H3 subtitle</h3>
-                        
-                    
+                          
+                     
                           
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim
                                 euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus.</p>
@@ -216,13 +250,247 @@
                 </div>
                 </div>
                  </div>
-
-                
             </div>
         </div>
         <!-- Footer -->
     </div>
+</div>
+<h1>Task - Front End Basic</h1>
+<p>Fork this codepen and style the below HTML using just <strong>CSS</strong> or you can apply extra classes to the HTML if required. The changes should be applied to only the following elements only:</p>
+
+<ol>
+  <li>Breadcrumbs</li>
+  <li>Layout of 2 columns - you can use any technique you would like or framework by clicking on the CSS settings. If you are able to get a basic responsive version - bonus - otherwise just desktop is fine.</li>
+  <li>Blockquote</li>
+</ol>
+
+<p>Once the <strong>CSS</strong> has been applied, solve the following <strong>JS</strong> problem:</p>
+
+<ul>
+  <li>Using the provided data object in the JS panel, output the title attributes in an ordered list. I.e. <code> let data = () => [{title: "Apples"}, {title: "Oranges"},{title: "Bananas"},{title: "Kiwi Fruit"},{title: "Cherries"}]
+    </code></li>
+  <li>Sort by alphabetical order</li>
+  <li>Append the unordered list to the &lt;div&gt; marked with the ID 'data' and replace the existing content in the box</li>
+</ul>
+
+<p>Other notes</p>
+
+<ul>
+  <li>Spend no more than 60mins in total <strong>(40mins CSS + 20mins JS)</strong></li>
+  <li>If you can't complete it, move on as this will be a test to see how well you can manage the given time. It doesn't need to be pixel perfect, just as long as you have the fundamental understanding</li>
+  <li>Feel free to ask Google but be prepared to explain your solution.</li>
+  <li>Add comments into your code where possible</li>
+</ul>
+
+<h2>Your answer</h2>
+
+<div id="page-wrapper" class="page-wrapper">
+    <!-- Navigation -->
+    <div class="main-wrapper">
+        <!-- Banner -->
+        <div class="container">
+            <div class="row justify-content-center my-row">
+                <div class="col-12 bread">
+                    <nav class="breadcrumbs">
+                        <p id="breadcrumb__label" class="visuallyhidden">You are here:</p>
+                        <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumbs__list" aria-labelledby="breadcrumb__label">
+                            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs__item">
+                                <a itemprop="item" href="" class="breadcrumbs__link">
+                                    <span itemprop="name">Level 1</span>
+                                </a>
+                              <span class="bc-sep">/</span>
+                                <meta itemprop="position" content="1" />
+                            </li>
+                            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs__item">
+                                <a itemprop="item" href="https://implementation.squiz.net/sqvic/barwon-water-2017/dist#breadcrumbs-02" class="breadcrumbs__link">
+                                    <span itemprop="name">Level 2</span>
+                                    
+                                </a>
+                              <span class="bc-sep">/</span>
+                                <meta itemprop="position" content="2" />
+                            </li>
+                            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs__item">
+                                <a itemprop="item" href="https://implementation.squiz.net/sqvic/barwon-water-2017/dist#breadcrumbs-03" class="breadcrumbs__link">
+                                    <span itemprop="name">Level 3</span>
+                                    
+                                </a>
+                              <span class="bc-sep">/</span>
+                                <meta itemprop="position" content="3" />
+                            </li>
+                            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs__item">
+                                <a itemprop="item" href="https://implementation.squiz.net/sqvic/barwon-water-2017/dist#breadcrumbs-04" class="breadcrumbs__link">
+                                    <span itemprop="name">Level 4</span>
+                                </a>
+                                <meta itemprop="position" content="4" />
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+                
+              <div class="container">
+                <div class="row">
+                  <div class="sidebar col-lg-3 col-md-4 col-sm-12">
+                     <nav class="lhs-nav">
+                        <ul class="lhs-nav__list">
+                            <li class="lhs-nav__item lhs-nav__item--parent">
+                                <a href="#" class="lhs-nav__link lhs-nav__link--has-children">
+                                    <span class="lhs-nav__link-text">Level 2.1</span>
+                                </a>
+                                <ul class="lhs-nav__sublist">
+                                    <li class="lhs-nav__subitem">
+                                        <a href="#" class="lhs-nav__sublink">
+                                            <span class="lhs-nav__link-text">Level 3.1</span>
+                                        </a>
+                                    </li>
+                                    <li class="lhs-nav__subitem">
+                                        <a href="#" class="lhs-nav__sublink">
+                                            <span class="lhs-nav__link-text">Level 3.1</span>
+                                        </a>
+                                    </li>
+                                    <li class="lhs-nav__subitem">
+                                        <a href="#" class="lhs-nav__sublink">
+                                            <span class="lhs-nav__link-text">Level 3.3</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="lhs-nav__item">
+                                <a href="#" class="lhs-nav__link">
+                                    <span class="lhs-nav__link-text">Level 2.2</span>
+                                </a>
+                            </li>
+                            <li class="lhs-nav__item">
+                                <a href="#" class="lhs-nav__link">
+                                    <span class="lhs-nav__link-text">Level 2.4</span>
+                                </a>
+                            </li>
+                            <li class="lhs-nav__item">
+                                <a href="#" class="lhs-nav__link">
+                                    <span class="lhs-nav__link-text">Level 2.5</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                  </div>
+                  <div class="page-content col-lg-9 col-md-8 col-sm-12">
+                    <main class="main" id="main">
+                        <section class="content-viewport">
+                            <h1>H1 Main Heading</h1>
+                            <div id="data">
+                                                                                                               <ul class="fruit-list">
+                            </ul>                            
+                            </div>
+                            <p class="text__leader">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim euismod euismod. Morbi dui mi, aliquam non lacus ut, <em>feugiat facilisis metus</em>. Cras ac convallis massa, eu lobortis lacus.</p>
+                            <p>Lorem ipsum dolor sit amet,
+                                <a href="https://www.barwonwater.vic.gov.au/" title="Barwon Water">consectetur adipiscing</a> elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim euismod euismod. Morbi
+                                dui mi, aliquam non lacus ut, feugiat facilisis metus. This is an
+                                <a href="https://onform.com.au/content/onform/agencies/BarwonWater/forms/notification-of-works.html"
+                                    class="link--external">external link</a> pretium erat lorem, quis imperdiet sem laoreet eget.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim
+                                euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus. Cras ac convallis massa, eu lobortis
+                                lacus. Cras accumsan nisl sed orci porta rhoncus. Etiam pretium erat lorem, quis imperdiet sem laoreet eget paragraph
+                                <a href="#">link style</a>
+                            </p>
+                        
+                            <p>Lorem ipsum dolor sit amet,
+                                <a href="#" title="text">consectetur adipiscing</a> elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim euismod euismod. Morbi
+                                dui mi, aliquam non lacus ut, feugiat facilisis metus. pretium erat lorem, quis imperdiet sem laoreet eget. </p>
+                            <p class="text__fine-print">Fine print. Barwon Water is bound by the Victorian Privacy and Data Protection Act 2014. We respect your privacy and
+                                will only collect and use personal information for legitimate purposes.</p>
+                        
+                            <h2>H2 heading</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim
+                                euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus. Cras ac convallis massa, eu lobortis
+                                lacus. Cras accumsan nisl sed orci porta rhoncus. Etiam pretium erat lorem, quis imperdiet sem laoreet eget. Donec
+                                nisl neque, ullamcorper id felis vel, lobortis lobortis ante.</p>
+                        
+                            <h3>H3 subtitle</h3>
+                          
+                     
+                          
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim
+                                euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus.</p>
+                            <p>Cras ac convallis massa, eu lobortis lacus. Cras accumsan nisl sed orci porta rhoncus. Etiam pretium erat lorem, quis
+                                imperdiet sem laoreet eget. Donec nisl neque, ullamcorper id felis vel, lobortis lobortis ante.</p>
+                        
+                            <blockquote>
+                                This is blockquote text. It has a fixed width and fixed line height. Cras dapibus tincidunt dapibus. Phasellus placerat quis
+                                enim euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus. Cras ac convallis massa, eu lobortis
+                                lacus. Cras accumsan nisl sed orci porta rhoncus. Etiam pretium erat lorem, quis imperdiet sem laoreet eget. Donec
+                                nisl neque, ullamcorper id felis vel, lobortis lobortis ante.
+                            </blockquote>
+                        
+                            <h4>H4 subtitle</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim
+                                euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus. Cras ac convallis massa, eu lobortis
+                                lacus. Cras accumsan nisl sed orci porta rhoncus. Etiam pretium erat lorem, quis imperdiet sem laoreet eget. Donec
+                                nisl neque, ullamcorper id felis vel, lobortis lobortis ante.</p>
+                        
+                            <h5>H5 subtitle</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim
+                                euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus. Cras ac convallis massa, eu lobortis
+                                lacus. Cras accumsan nisl sed orci porta rhoncus. Etiam pretium erat lorem, quis imperdiet sem laoreet eget. Donec
+                                nisl neque, ullamcorper id felis vel, lobortis lobortis ante.</p>
+                        
+                            <h6>H6 subtitle</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis enim
+                                euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus. Cras ac convallis massa, eu lobortis
+                                lacus. Cras accumsan nisl sed orci porta rhoncus. Etiam pretium erat lorem, quis imperdiet sem laoreet eget. Donec
+                                nisl neque, ullamcorper id felis vel, lobortis lobortis ante.</p>
+                        
+                            <h4>Ordered and unordered lists</h4>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis
+                                    enim euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus.</li>
+                                <li>Cras ac convallis massa, eu lobortis lacus. Cras accumsan nisl sed orci porta rhoncus. Etiam pretium erat lorem,
+                                    quis imperdiet sem laoreet eget. Donec nisl neque, ullamcorper id felis vel, lobortis lobortis ante.
+                                    <ul>
+                                        <li>UL UL Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                        <li>Cras ac convallis massa, eu lobortis lacus.</li>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                    </ul>
+                                </li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis
+                                    enim euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus.
+                                    <ol>
+                                        <li>UL OL Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                        <li>Cras ac convallis massa, eu lobortis lacus.</li>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                    </ol>
+                                </li>
+                            </ul>
+                        
+                            <ol>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis
+                                    enim euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus.</li>
+                                <li>Cras ac convallis massa, eu lobortis lacus. Cras accumsan nisl sed orci porta rhoncus. Etiam pretium erat lorem,
+                                    quis imperdiet sem laoreet eget. Donec nisl neque, ullamcorper id felis vel, lobortis lobortis ante.
+                                    <ol>
+                                        <li>OL OL Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                        <li>Cras ac convallis massa, eu lobortis lacus.</li>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                    </ol>
+                                </li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus tincidunt dapibus. Phasellus placerat quis
+                                    enim euismod euismod. Morbi dui mi, aliquam non lacus ut, feugiat facilisis metus.
+                                    <ul>
+                                        <li>OL UL Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                        <li>Cras ac convallis massa, eu lobortis lacus.</li>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </section>
+                    </main>
+                </div>
+                </div>
+                 </div>
+            </div>
+        </div>
+        <!-- Footer -->
     </div>
+</div>
+
     
 
     <script

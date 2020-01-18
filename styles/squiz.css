@@ -14,10 +14,6 @@ body {
 
 .breadcrumbs {
   position: relative;
-  background-color: #eee;
-  border-radius: 5px;
-  border: 0 solid #747d8c;
-  border-radius: 5px;
 }
 .breadcrumbs li,
 .breadcrumbs span {
@@ -26,7 +22,7 @@ body {
 }
 .breadcrumbs li:hover,
 .breadcrumbs span:hover {
-  color: #004a99;
+  color: #003e80;
 }
 .breadcrumbs .breadcrumbs__item {
   display: inline;
@@ -36,19 +32,19 @@ body {
 }
 .breadcrumbs .breadcrumbs__list {
   list-style-type: none;
-  margin: 2px;
   padding: 2px;
 }
 
 .page-content {
-  border: 2px solid #747d8c;
+  border: 1.5px solid #747d8c;
   border-radius: 5px;
   text-align: left;
 }
 
 .lhs-nav__sublink,
-.lhs-nav__item {
-  border: 1px solid #747d8c;
+.lhs-nav__item,
+.lhs-nav__link {
+  border: 0 solid #747d8c;
   border-radius: 5px;
 }
 
@@ -103,10 +99,9 @@ body {
 */
 .lhs-nav {
   background-color: #efefef;
-  border: 1px solid #e1e1e1;
   display: block;
   margin-bottom: 1.25rem;
-  margin-right: 1.25rem;
+  margin-right: 0;
 }
 
 .lhs-nav__list,
@@ -122,19 +117,12 @@ body {
   display: none;
 }
 
-.lhs-nav__sublistdeep {
-  border-top: 1px solid #e1e1e1;
-}
-
-.lhs-nav__subitem:last-child .lhs-nav__sublink {
-  border-bottom: 0 none;
-}
-
 .lhs-nav__link,
 .lhs-nav__sublink,
 .lhs-nav__sublinkdeep {
   background-color: transparent;
-  border-top: 1px solid #e1e1e1;
+  border: 1px solid #747d8c;
+  border-radius: 5px;
   color: #4a4a4a;
   display: flex;
   line-height: 1.5;
@@ -217,14 +205,6 @@ body {
   flex-grow: 1;
   flex-shrink: 0;
   margin-right: 0.5rem;
-}
-
-.lhs-nav__item:first-child .lhs-nav__link {
-  border-top: 0 none;
-}
-
-.lhs-nav__subitemdeep:first-child .lhs-nav__sublinkdeep {
-  border-top: 0 none;
 }
 
 .lhs-nav__item--parent .lhs-nav__link--has-children::after,

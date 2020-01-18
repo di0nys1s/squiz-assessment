@@ -34,9 +34,6 @@ body {
 // hover darken pseudo class added for accessibility purposes
 .breadcrumbs {
     position: relative;
-    background-color: $backColor;
-    border-radius: 5px;
-    @include borderStyle(0, 5px);
 
     li,
     span {
@@ -44,7 +41,7 @@ body {
         color: $breadSeperationColor;
 
         &:hover {
-            color: darken($breadSeperationColor, 20%);
+            color: darken($breadSeperationColor, 25%);
         }
     }
 
@@ -58,19 +55,19 @@ body {
 
     .breadcrumbs__list {
         list-style-type: none;
-        margin: 2px;
         padding: 2px;
     }
 }
 
 .page-content {
-    @include borderStyle(2px, 5px);
+    @include borderStyle(1.5px);
     @include textAlign(left);
 }
 
 .lhs-nav__sublink,
-.lhs-nav__item {
-    @include borderStyle(1px);
+.lhs-nav__item,
+.lhs-nav__link {
+    @include borderStyle(0);
 }
 
 // blockquote css
@@ -141,10 +138,10 @@ body {
 
 .lhs-nav {
     background-color: #efefef;
-    border: 1px solid #e1e1e1;
+    // border: 1px solid #e1e1e1;
     display: block;
     margin-bottom: 1.25rem;
-    margin-right: 1.25rem;
+    margin-right: 0;
 }
 
 .lhs-nav__list,
@@ -160,19 +157,11 @@ body {
     display: none;
 }
 
-.lhs-nav__sublistdeep {
-    border-top: 1px solid #e1e1e1;
-}
-
-.lhs-nav__subitem:last-child .lhs-nav__sublink {
-    border-bottom: 0 none;
-}
-
 .lhs-nav__link,
 .lhs-nav__sublink,
 .lhs-nav__sublinkdeep {
     background-color: transparent;
-    border-top: 1px solid #e1e1e1;
+    @include borderStyle();
     color: #4a4a4a;
     display: flex;
     line-height: 1.5;
@@ -255,14 +244,6 @@ body {
     flex-grow: 1;
     flex-shrink: 0;
     margin-right: 0.5rem;
-}
-
-.lhs-nav__item:first-child .lhs-nav__link {
-    border-top: 0 none;
-}
-
-.lhs-nav__subitemdeep:first-child .lhs-nav__sublinkdeep {
-    border-top: 0 none;
 }
 
 .lhs-nav__item--parent .lhs-nav__link--has-children::after,
