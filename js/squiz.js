@@ -6,15 +6,12 @@ const data = () => [
   { title: "Cherries" }
 ];
 
-// create an empty array
-const sortedData = [];
-
-// push the relevant data into the empty array
-data().map(t => {
-  sortedData.push(t.title);
-  // sort the array data with alfhabetical order
-  sortedData.sort();
-});
+// create a new array and copy titles via sorted by alphabetical order
+let sortedFruits = [
+  ...data()
+    .map(f => f.title)
+    .sort()
+];
 
 // loop inside the new sorted array and append the values with related list items
-sortedData.map(f => $(".fruit-list").append("<li>" + f + "</li>"));
+sortedFruits.map(f => $(".fruit-list").append("<li>" + f + "</li>"));
